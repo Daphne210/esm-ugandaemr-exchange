@@ -59,14 +59,6 @@ export const syncTaskTypesLink = getSyncLifecycle(
   options
 );
 
-export const clientRegistryLink = getSyncLifecycle(
-  createLeftPanelLink({
-    name: "client-registry",
-    title: "Client Registry",
-  }),
-  options
-);
-
 export const scheduleManagerLink = getSyncLifecycle(
   createLeftPanelLink({
     name: "schedule-manager",
@@ -79,7 +71,7 @@ export const VLSuppressionPrediction = getAsyncLifecycle(
   () =>
     import(
       "./components/workspace/ai-predictions/vl-suppression-prediction-button.component"
-    ),
+      ),
   {
     featureName: "vl suppression prediction workspace",
     moduleName,
@@ -90,7 +82,7 @@ export const VLSuppressionPredictionWorkspace = getAsyncLifecycle(
   () =>
     import(
       "./components/workspace/ai-predictions/vl-suppression-prediction-workspace.component"
-    ),
+      ),
   {
     featureName: "vl suppression prediction workspace",
     moduleName,

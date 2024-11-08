@@ -1,171 +1,174 @@
 {
-    "$schema": "https://json.openmrs.org/routes.schema.json",
-    "backendDependencies": {
-        "fhir2": ">=1.2",
-        "webservices.rest": "^2.24.0"
+  "$schema": "https://json.openmrs.org/routes.schema.json",
+  "backendDependencies": {
+    "fhir2": ">=1.2",
+    "webservices.rest": "^2.24.0"
+  },
+  "pages": [
+    {
+      "component": "root",
+      "route": "health-exchange"
+    }
+  ],
+  "extensions": [
+    {
+      "component": "root",
+      "name": "health-exchange-dashboard",
+      "slot": "health-exchange-dashboard-slot"
     },
-    "pages": [
-        {
-            "component": "root",
-            "route": "health-exchange"
-        }
-    ],
-    "extensions": [
-        {
-            "component": "root",
-            "name": "health-exchange-dashboard",
-            "slot": "health-exchange-dashboard-slot"
-        },
-        {
-            "component": "hieHomeLink",
-            "name": "hie-home-link",
-            "slot": "health-exchange-left-panel-slot",
-            "order": 0
-        },
-        {
-            "component": "fhirProfileLink",
-            "name": "fhir-profile-link",
-            "slot": "health-exchange-left-panel-slot",
-            "order": 1
-        },
-        {
-            "component": "syncTaskTypesLink",
-            "name": "sync-task-types",
-            "slot": "health-exchange-left-panel-slot",
-            "order": 2
-        },
-        {
-            "component": "registriesDashboard",
-            "name": "client-registry-link",
-            "slot": "health-exchange-left-panel-slot"
-        },
-        {
-            "name": "vl-suppression-prediction",
-            "component": "VLSuppressionPrediction",
-            "slot": "action-menu-chart-items-slot"
-        },
-        {
-            "name": "sync-task-types-component",
-            "component": "SyncTaskTypesComponent"
-        },
-        {
-            "name": "sync-tasktype-row-details",
-            "component": "SyncTaskTypeRow"
-        },
-        {
-            "name": "ai-predictions-workspace",
-            "component": "VLSuppressionPredictionWorkspace"
-        },
-        {
-            "name": "chatbot-button",
-            "component": "ChatbotButton",
-            "slot": "homepage-widgets-slot"
-        },
-        {
-            "component": "toolsModal",
-            "name": "tools-modal",
-            "online": true,
-            "offline": true
-        },
-        {
-            "component": "hmisModal",
-            "name": "hmis-modal",
-            "online": true,
-            "offline": true
-        },
-        {
-            "component": "pepfarModal",
-            "name": "pepfar-modal",
-            "online": true,
-            "offline": true
-        },
-        {
-            "name": "no-of-patients-tile-component",
-            "slot": "client-registry-tiles-slot",
-            "component": "totalPatientsTile",
-            "meta": {
-                "name": "PatientsTileSlot",
-                "title": "Total No of Patients"
-            }
-        },
-        {
-            "name": "no-of-patients-synced-tile-component",
-            "slot": "client-registry-tiles-slot",
-            "component": "totalPatientsSyncedTile",
-            "meta": {
-                "name": "PatientsSyncedTileSlot",
-                "title": "Total No of Patients Synced"
-            }
-        },
-        {
-            "name": "cr-patient-send-to-cr-button",
-            "component": "sendPatientToCRButton",
-            "slot": "cr-patients-actions-slot"
-        },
-        {
-            "name": "send-patient-to-cr-dialog",
-            "component": "sendPatientToCRDialog"
-        },
-        {
-            "name": "health-exchange-app-menu-item",
-            "component": "healthExchangeAppMenuItem",
-            "slot": "app-menu-item-slot",
-            "meta": {
-                "name": "Health Exchange"
-            }
-        },
-        {
-            "name": "client-registry-dashboard",
-            "slot": "hie-registries-slot",
-            "component": "clientRegistryDashboardLink",
-            "meta": {
-                "slot": "client-registry-dashboard-slot",
-                "columns": 1,
-                "path": "client-registry-dashboard",
-                "layoutMode": "anchored"
-            }
-        },
-        {
-            "name": "facility-registry-dashboard",
-            "slot": "hie-registries-slot",
-            "component": "facilityRegistryDashboardLink",
-            "meta": {
-                "slot": "facility-registry-dashboard-slot",
-                "columns": 1,
-                "path": "facility-registry-dashboard",
-                "layoutMode": "anchored"
-            }
-        },
-        {
-            "name": "product-registry-dashboard",
-            "slot": "hie-registries-slot",
-            "component": "productRegistryDashboardLink",
-            "meta": {
-                "slot": "product-registry-dashboard-slot",
-                "columns": 1,
-                "path": "product-registry-dashboard",
-                "layoutMode": "anchored"
-            }
-        },
-        {
-            "name": "client-registry-dashboard-ext",
-            "slot": "client-registry-dashboard-slot",
-            "component": "clientRegistry"
-        },
-        {
-            "name": "facility-registry-dashboard-ext",
-            "slot": "facility-registry-dashboard-slot",
-            "component": "facilityRegistry"
-        },
-        {
-            "name": "product-registry-dashboard-ext",
-            "slot": "product-registry-dashboard-slot",
-            "component": "productRegistry"
-        },
-        {
-          "component": "scheduleManagerLink",
-          "name": "scheduler-manager-link",
-          "slot": "health-exchange-left-panel-slot"
-        }
-    ]
+    {
+      "component": "hieHomeLink",
+      "name": "hie-home-link",
+      "slot": "health-exchange-left-panel-slot",
+      "order": 0
+    },
+    {
+      "component": "fhirProfileLink",
+      "name": "fhir-profile-link",
+      "slot": "health-exchange-left-panel-slot",
+      "order": 1
+    },
+    {
+      "component": "syncTaskTypesLink",
+      "name": "sync-task-types",
+      "slot": "health-exchange-left-panel-slot",
+      "order": 2
+    },
+    {
+      "component": "scheduleManagerLink",
+      "name": "scheduler-manager-link",
+      "slot": "health-exchange-left-panel-slot",
+      "order": 3
+    },
+    {
+      "component": "registriesDashboard",
+      "name": "registry-link",
+      "slot": "health-exchange-left-panel-slot",
+      "order": 4
+    },
+    {
+      "name": "vl-suppression-prediction",
+      "component": "VLSuppressionPrediction",
+      "slot": "action-menu-chart-items-slot"
+    },
+    {
+      "name": "sync-task-types-component",
+      "component": "SyncTaskTypesComponent"
+    },
+    {
+      "name": "sync-tasktype-row-details",
+      "component": "SyncTaskTypeRow"
+    },
+    {
+      "name": "ai-predictions-workspace",
+      "component": "VLSuppressionPredictionWorkspace"
+    },
+    {
+      "name": "chatbot-button",
+      "component": "ChatbotButton",
+      "slot": "homepage-widgets-slot"
+    },
+    {
+      "component": "toolsModal",
+      "name": "tools-modal",
+      "online": true,
+      "offline": true
+    },
+    {
+      "component": "hmisModal",
+      "name": "hmis-modal",
+      "online": true,
+      "offline": true
+    },
+    {
+      "component": "pepfarModal",
+      "name": "pepfar-modal",
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "no-of-patients-tile-component",
+      "slot": "client-registry-tiles-slot",
+      "component": "totalPatientsTile",
+      "meta": {
+        "name": "PatientsTileSlot",
+        "title": "Total No of Patients"
+      }
+    },
+    {
+      "name": "no-of-patients-synced-tile-component",
+      "slot": "client-registry-tiles-slot",
+      "component": "totalPatientsSyncedTile",
+      "meta": {
+        "name": "PatientsSyncedTileSlot",
+        "title": "Total No of Patients Synced"
+      }
+    },
+    {
+      "name": "cr-patient-send-to-cr-button",
+      "component": "sendPatientToCRButton",
+      "slot": "cr-patients-actions-slot"
+    },
+    {
+      "name": "send-patient-to-cr-dialog",
+      "component": "sendPatientToCRDialog"
+    },
+    {
+      "name": "health-exchange-app-menu-item",
+      "component": "healthExchangeAppMenuItem",
+      "slot": "app-menu-item-slot",
+      "meta": {
+        "name": "Health Exchange"
+      }
+    },
+    {
+      "name": "client-registry-dashboard",
+      "slot": "hie-registries-slot",
+      "component": "clientRegistryDashboardLink",
+      "meta": {
+        "slot": "client-registry-dashboard-slot",
+        "columns": 1,
+        "path": "client-registry-dashboard",
+        "layoutMode": "anchored"
+      }
+    },
+    {
+      "name": "facility-registry-dashboard",
+      "slot": "hie-registries-slot",
+      "component": "facilityRegistryDashboardLink",
+      "meta": {
+        "slot": "facility-registry-dashboard-slot",
+        "columns": 1,
+        "path": "facility-registry-dashboard",
+        "layoutMode": "anchored"
+      }
+    },
+    {
+      "name": "product-registry-dashboard",
+      "slot": "hie-registries-slot",
+      "component": "productRegistryDashboardLink",
+      "meta": {
+        "slot": "product-registry-dashboard-slot",
+        "columns": 1,
+        "path": "product-registry-dashboard",
+        "layoutMode": "anchored"
+      }
+    },
+    {
+      "name": "client-registry-dashboard-ext",
+      "slot": "client-registry-dashboard-slot",
+      "component": "clientRegistry"
+    },
+    {
+      "name": "facility-registry-dashboard-ext",
+      "slot": "facility-registry-dashboard-slot",
+      "component": "facilityRegistry"
+    },
+    {
+      "name": "product-registry-dashboard-ext",
+      "slot": "product-registry-dashboard-slot",
+      "component": "productRegistry"
+    }
+
+  ]
 }

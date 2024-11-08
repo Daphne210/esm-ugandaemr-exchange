@@ -102,7 +102,7 @@ export interface ValueReference {
 
 // get Patients
 export function usePatients(q: string, includeDead: boolean) {
-  const apiUrl = `${restBaseUrl}/patient?q=${q}&v=${v}&includeDead=${includeDead}&totalCount=true&limit=10`;
+  const apiUrl = `${restBaseUrl}/patient?q=${q}&v=${v}&includeDead=${includeDead}&totalCount=true`;
   const { data, error, isLoading, isValidating, mutate } = useSWR<
     FetchResponse,
     Error
